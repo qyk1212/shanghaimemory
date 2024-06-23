@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+    <meta name="ShanghaiMemory" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>历史长河</title>
+    <link rel="stylesheet" href="../css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../css/nav-bar.css" media="screen">
+    
+    <script class="u-script" type="text/javascript" src="../js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../js/nicepage.js" defer=""></script>
+    <!-- <script class="u-script" type="text/javascript" src="js/comments.js" defer=""></script> -->
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
+    <link rel="bookmark" href="../imgs/favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史长河</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .shell {
+            width: 100%;
+            position: relative;
+            padding: 80px 0;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        <!-- .shell:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(99, 99, 99, 0.8);
+            content: "";
+        } -->
+
+        .header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 46px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .timeline {
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            flex-direction: column;
+            max-width: 700px;
+            position: relative;
+        }
+
+        .content-title {
+            font-weight: normal;
+            font-size: 66px;
+            margin: -10px 0 0 0;
+            transition: 0.4s;
+            padding: 0 10px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .content-desc {
+            margin: 0;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 25px;
+        }
+
+        .timeline:before {
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            margin-left: -1px;
+            content: "";
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .item {
+            padding: 40px 0;
+            opacity: 0.3;
+            filter: blur(2px);
+            transition: 0.5s;
+            box-sizing: border-box;
+            width: calc(50% - 40px);
+            display: flex;
+            position: relative;
+            transform: translateY(-80px);
+        }
+
+        .item:before {
+            /* 设置在伪元素before中的内容  */
+            content: attr(data-text);
+            letter-spacing: 3px;
+            width: 100%;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            border-left: 2px solid rgba(255, 255, 255, 0.5);
+            top: 70%;
+            margin-top: -5px;
+            padding-left: 15px;
+            opacity: 0;
+            right: calc(-100% - 56px);
+            font: 900 20px '';
+            letter-spacing: 5px;
+        }
+
+        .item:nth-child(even) {
+            align-self: flex-end;
+        }
+
+        .item:nth-child(even):before {
+            right: auto;
+            text-align: right;
+            left: calc(-100% - 56px);
+            padding-left: 0;
+            border-left: none;
+            border-right: 2px solid rgba(255, 255, 255, 0.5);
+            padding-right: 15px;
+        }
+
+        .item--active {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0px);
+        }
+
+        .item--active:before {
+            top: 50%;
+            transition: 0.3s all 0.2s;
+            opacity: 1;
+        }
+
+        .item--active .content-title {
+            margin: -50px 0 20px 0;
+        }
+
+        .img {
+            max-width: 100%;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 16px;
+            letter-spacing: 5px;
+            margin: 10px 0 0 0;
+            font-weight: normal;
+        }
+
+        .footer {
+            padding: 95px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #999;
+            display: inline-block;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .item {
+                align-self: baseline !important;
+                width: 100%;
+                padding: 0 30px 150px 80px;
+            }
+
+            .item:before {
+                left: 10px !important;
+                padding: 0 !important;
+                top: 50px;
+                text-align: center !important;
+                width: 60px;
+                border: none !important;
+            }
+
+            .item:last-child {
+                padding-bottom: 40px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .timeline:before {
+                left: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="shell" id="shell">
+        <div class="header">
+            <h2 class="title">历史长河</h2>
+            <h3 class="subtitle">昨天、今天、明天</h3>
+        </div>
+        <div class="timeline">
+
+
+            <div class="item" data-text="上海建城">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/0c6ca0332d8a070ff61ac79d2cd11faf.jpg" />
+                    <h2 class="content-title">1292</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;唐天宝十载(公元751年)，上海地区属华亭县(今松江区)。北宋淳化二年(公元991年)，因松江上游不断淤浅，海岸线东移，大船出入不便，外来船舶只得停泊在松江的一条支流“上海浦”上(其位置在今外滩至十六铺附近的黄浦江)。南宋咸淳三年(公元 1267年)，在上海浦西岸设置市镇，定名为“上海镇”。元至元二十九年(公元1292年)，中央政府把上海镇从华亭县划出，批准设立上海县，标志着上海建城之始。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="南京条约签订">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/553f77e905d9d73bf475865873a3d461.jpg" />
+                    <h2 class="content-title">1842</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;南京条约要求五口通商。清朝政府开放广州、福州、厦门、宁波、上海等五处为通商口岸，准许英国派驻领事，准许英商及其家属自由居住。上海在鸦片战争结束后，成为一个开放的通商口岸，外国租界开始建立。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海总商会成立">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/237bef2dbf2de3d0fe06aaa436027cec.png" />
+                    <h2 class="content-title">1863</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;清光绪二十八年2月22日，经清廷商约大臣盛宣怀的提议，中国第一个商会——上海商业会议公所成立，地址为大马路（今南京路）五昌里。清光绪三十年，上海商业会议公所改组为上海商务总会，会员48人。民国元年2月29日，上海商务总会与商埠公所合并，正式成立上海总商会，100位公所、会馆以及其他行业代表入会。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海电灯首次亮相">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/c83662c4dffef5cc30bc28d75750d81c.png" />
+                    <h2 class="content-title">1882</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;在上海南京路与江西路西北转角处，亮起了中国第一盏电灯，正式宣告电灯开始在中国使用。自此，电走进了上海的大街小巷，点亮了上海的万家灯火，促进了上海的迅猛发展。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海工人三次武装起义">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/6f3d74be20a7286c030547eb54fa99ec.png" />
+                    <h2 class="content-title">1927</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;随着北伐战争的胜利进军，五卅运动后暂处低潮的上海工人运动重新高涨起来。为以实际行动迎接北伐军进军上海，建立代表民意的新上海市民政府，1926年秋至1927年春，中共中央和上海区委发动组织上海工人，连续举行了三次武装起义。上海工人第三次武装起义的胜利，是大革命时期中国工人运动的一个壮举，也是北伐战争时期工人运动发展的最高峰，为在中国开展城市武装斗争作了大胆的尝试。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="一二八事变">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/9da4087d6bba8b97a4f2917aac109a59.png" />
+                    <h2 class="content-title">1932</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;一·二八事变，又称一·二八淞沪抗战，日本称上海事变或第一次上海事变、淞沪战争。是在九·一八事变之后，日本为了转移国际视线，并图谋侵占中国东部沿海富庶区域，而在1932年1月28日蓄意发动的侵略事件。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="淞沪会战">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/ee07208b1d6e7ba46aa816489dac9f75.png" />
+                    <h2 class="content-title">1937</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;淞沪会战（又称八一三战役、第二次淞沪抗战，日本称为第二次上海事变），是中日双方在抗日战争中的第一场大型会战，也是整个中日战争中进行的规模最大、战斗最惨烈的一场战役。在淞沪会战中，中日双方共有约100万军队投入战斗，战役本身持续了三个月，日军投入9个师团22万人，伤亡9万余人；中国军队投入73个师70余万人，伤亡25万余人。淞沪会战，使日军被迫转移战略主攻方向，粉碎了日本“三个月灭亡中国”的计划。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="中华人民共和国成立">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/29bdc3d3919ad71ed4948f0563f49a4d.png" />
+                    <h2 class="content-title">1949</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;1949年10月1日，中华人民共和国成立，上海随着新中国的诞生成为一个特大城市。上海的发展揭开了新篇章，上海的经济和社会面貌发生了巨大变化。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海美术馆成立">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/f2666b68fc100bee7159c0ee76d709f8.png" />
+                    <h2 class="content-title">1956</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;上海美术馆是一所公益性社会文化事业机构。原位于繁华的南京西路，后迁至2012年10月1日迁入原上海世博园的中国国家馆，更名为中华艺术宫和上海当代艺术博物馆，成为其第二副牌。上海美术馆背靠人民广场，毗邻上海博物馆、上海大剧院和上海城市规划展示馆，是一座功能健全、设施先进、具有一定影响的近现代美术博物馆。美术馆拥有藏品万余件，均为国际及国家级艺术品。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="改革开放">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/2d4cf8f9cd6b7b2cfe9688c24d2ce32e.png" />
+                    <h2 class="content-title">1978</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;改革开放，是1978年12月十一届三中全会中国开始实行的对内改革、对外开放的政策。改革开放政策的开始对上海的经济和社会发展产生了深远影响。上海作为改革开放的排头兵、创新发展先行者，一度被外国学者称为解读现代中国的“一把钥匙”。
+                    </p>
+                </div>
+            </div>
+
+
+            <!--  -->
+            <div class="item" data-text="浦东新区成立">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/3a2d1b6a8143c099ffed59de0dddd896.png" />
+                    <h2 class="content-title">1990</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;浦东新区位于上海市东部，西靠黄浦江，东临长江入海口，面积1210平方公里，常住人口576.77万人，现辖12个街道、24个镇。1990年4月18日，党中央国务院宣布开发开放上海浦东。经过30多年的发展，浦东已经从过去以农业为主的区域，变成了一座功能集聚、要素齐全、设施先进的现代化新城。
+                </div>
+            </div>
+
+            <div class="item" data-text="上海地铁开始运营">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/85dbb8626678d08ad4df583e2b87a3e0.png" />
+                    <h2 class="content-title">1993</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;1993年5月28日，上海轨道交通1号线南段锦江乐园-徐家汇通车试运营，标志着上海进入地铁时代。据长三角日报报道，2022年上海地铁总里程达到831公里，在运营里程、列车数量、全自动驾驶规模上拥有了三个“世界第一”。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海合作组织成立">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/1fc4ebf975bd618bf2333d6e07166953.png" />
+                    <h2 class="content-title">2001</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp; 上海合作组织，2001年6月15日中华人民共和国、哈萨克斯坦共和国、吉尔吉斯共和国、俄罗斯联邦、塔吉克斯坦共和国、乌兹别克斯坦共和国在中国上海宣布成立的永久性政府间国际组织。上海合作组织起源于1996年成立的上海五国会晤机制，是中华人民共和国、俄罗斯联邦、哈萨克斯坦共和国、吉尔吉斯共和国（简称吉尔吉斯斯坦）、塔吉克斯坦共和国的关于加强边境地区信任和裁军的谈判进程的组织。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="中国加入世贸组织">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/9192ff616d9e6d696cb79170c08997c7.png" />
+                    <h2 class="content-title">2001</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;在卡塔尔首都多哈举行的世界贸易组织第四届部长级会议上响起一片掌声，大会通过中国加入世贸组织的决定。12月11日，中国正式成为WTO第143个成员。上海成为中国国际贸易的中心之一，我国对外开放事业进入一个新的阶段。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海世博会申办成功">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/68311175e385531ebb02b9739c28ef8d.png" />
+                    <h2 class="content-title">2002</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;2002年12月3日，在摩纳哥蒙特卡洛举行的国际展览局第132次成员国大会上，上海获得2010年世界博览会的举办权，在世博历史上以及国展局历史上都具有里程碑意义。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海世博会">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/d1b1e63cd3608b7478e738ffe2a21877.png" />
+                    <h2 class="content-title">2010</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;中国2010年上海世界博览会（Expo 2010 Shanghai China），简称上海世博会，是第41届世界博览会，于2010年5月1日至10月31日在中国上海市卢湾区（今黄浦区）和浦东新区举行。该世博会是中国首次举办的综合性世界博览会，也是首次由发展中国家主办的世博会，共有256个国家、地区、国际组织参展，吸引世界各地7308万人次参观者前往。该世博会主题为“城市，让生活更美好（Better City, Better Life）”。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海自贸区设立">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/1ed312c9b028de460dced60474e9d3e8.png" />
+                    <h2 class="content-title">2013</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;中国自由贸易区是指在国境内关外设立的，以优惠税收和海关特殊监管政策为主要手段，以贸易自由化便利化为主要目的的多功能经济性特区。2013年9月27日，国务院批复成立中国（上海）自由贸易试验区。中国（上海）自由贸易试验区建设是国家战略，是中国第一个与此前的经济特区、开发区、产业园区在指导思想、战略定位、总体目标、任务措施等方面有新内涵的改革开放载体。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海科创板开设">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/64b166820e4e16823a0aac6e57eb0d2c.png" />
+                    <h2 class="content-title">2018</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;2018年11月5日，国家主席习近平在首届中国国际进口博览会开幕式演讲中宣布将在上海证券交易所设立科创板并试点注册制。此项改革对于支持科技创新、推动经济高质量发展、推进资本市场市场化改革和加快上海国际金融中心建设具有重要战略意义。
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="上海大都市圈规划">
+                <div class="content">
+                    <img class="img" src="https://img.gejiba.com/images/a27c408d161c09ff884e5a799fe38cab.png" />
+                    <h2 class="content-title">2022</h2>
+                    <p class="content-desc">
+                        &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;上海市人民政府、江苏省人民政府、浙江省人民政府联合发布《上海大都市圈空间协同规划》，规划范围确定为上海及其周边8座城市，实现了九城联动。这是全国首个跨区域、协商性的国土空间规划，旨在打造具有全球影响力的世界级城市群。规划期限至2050年，中期至2035年，近期至2025年，衔接“十四五”规划。
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="u-align-center-sm u-align-center-xs u-clearfix u-footer u-palette-2-dark-2" 
+    style="
+    background: rgb(0,13,36);
+background: linear-gradient(0deg, rgba(0,13,36,1) 21%, rgba(0,13,36,0.8772102591036415) 49%, rgba(0,13,36,0.6727284663865547) 73%, rgba(42,54,64,0.5830926120448179) 88%);
+    "id="sec-f776"><div class="u-clearfix u-sheet u-valign-middle-sm u-sheet-1">
+		<p class="u-text u-text-default u-text-1" data-animation-name="customAnimationIn" data-animation-duration="2500">推荐网站 </p>
+		<div class="u-list u-list-1">
+		  <div class="u-repeater u-repeater-1">
+			<div class="u-container-style u-list-item u-repeater-item">
+			  <div class="u-container-layout u-similar-container u-container-layout-1">
+				<p class="u-text u-text-default u-text-2">
+					<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+          data-href="https://www.archives.sh.cn/">上海档案信息网</a>
+				</p>
+			  </div>
+			</div>
+			<div class="u-container-style u-list-item u-repeater-item">
+			  <div class="u-container-layout u-similar-container u-container-layout-2">
+				<p class="u-text u-text-default u-text-3">
+				  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" 
+          data-href="https://www.shh-shrhmuseum.org.cn/">上海历史博物馆</a>
+				</p>
+			  </div>
+			</div>
+			<div class="u-container-style u-list-item u-repeater-item">
+			  <div class="u-container-layout u-similar-container u-container-layout-3">
+				<p class="u-text u-text-default u-text-4">
+					<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" 
+          data-href="https://www.xuexi.cn/">学习强国</a>
+				</p>
+			  </div>
+			</div>
+			<div class="u-container-style u-list-item u-repeater-item">
+			  <div class="u-container-layout u-similar-container u-container-layout-4">
+				<p class="u-text u-text-default u-text-5">
+					<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" 
+          data-href="https://tjj.sh.gov.cn/lsyg/index.html">上海市人民政府</a>
+				</p>
+			  </div>
+			</div>
+			<div class="u-container-style u-list-item u-repeater-item">
+			  <div class="u-container-layout u-similar-container u-container-layout-5">
+				<p class="u-text u-text-default u-text-6"><a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" 
+          data-href="http://www.txlzp.com/sheng/shanghai">上海老地图</a></p>
+			  </div>
+			</div>
+			<div class="u-container-style u-list-item u-repeater-item">
+			  <div class="u-container-layout u-similar-container u-container-layout-6">
+				<p class="u-text u-text-default u-text-7">
+					<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" 
+          data-href="http://ish.xinmin.cn/xnjx/2017/11/01/31330196.html">央视网</a>
+				</p>
+			  </div>
+			</div>
+			<div class="u-container-style u-list-item u-repeater-item">
+			  <div class="u-container-layout u-similar-container u-container-layout-7">
+				<p class="u-text u-text-default u-text-8">
+					<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" 
+          data-href="https://www.shanghaimuseum.net/">上海博物馆</a>
+				</p>
+			  </div>
+			</div>
+			<div class="u-container-style u-list-item u-repeater-item">
+			  <div class="u-container-layout u-similar-container u-container-layout-8">
+				<p class="u-text u-text-default u-text-9">
+					<a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" 
+          data-href="http://www.aibaohu.com/ShowArticlem.aspx?id=952">中国历史建筑保护网</a>
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="icp" style="text-align:center;">© 2023 ShanghaiMemory  <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2022023082号</a></div>
+	</footer>
+    <span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        (function ($) {
+            $.fn.timeline = function () {
+                var selectors = {
+                    id: $(this),
+                    item: $(this).find(".item"),
+                    activeClass: "item--active",
+                    img: ".img"
+                };
+                // 将第一个时间轴项目激活，并设置时间轴背景图片为第一个项目的图片
+                selectors.item.eq(0).addClass(selectors.activeClass);
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    selectors.item
+                        .first()
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+                // 获取时间轴项目的总数
+                var itemLength = selectors.item.length;
+                // 当页面滚动时，触发滚动事件
+                $(window).scroll(function () {
+                    var max, min;
+                    // 获取页面滚动的距离
+                    var pos = $(this).scrollTop();
+                    selectors.item.each(function (i) {
+                        // 获取当前时间轴项目的最小和最大高度
+                        min = $(this).offset().top-200;
+                        max = $(this).height() + $(this).offset().top;
+                        var that = $(this);
+                        // 如果滚动到最后一个项目，并且超过了当前项目高度的一半，
+                        // 则将最后一个项目设置为激活状态，并设置背景图片为最后一个项目的图片
+                        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                            selectors.item.removeClass(selectors.activeClass);
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                selectors.item
+                                    .last()
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.last().addClass(selectors.activeClass);
+                        }
+                        // 如果当前滚动位置在当前项目的最小和最大高度之间，
+                        // 则将当前项目设置为激活状态，并设置背景图片为当前项目的图片
+                        else if (pos <= max - 10 && pos >= min) {
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                $(this)
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.removeClass(selectors.activeClass);
+                            $(this).addClass(selectors.activeClass);
+                        }
+                    });
+                });
+            };
+        })(jQuery)
+        /*
+        最后，我们调用 timeline 插件并传入时间轴的 ID 作为参数。
+        这将启用时间轴插件并为该时间轴绑定滚动事件。
+        */
+        $("#shell").timeline();
+    </script>
+
+
+
+    
+</body>
+
+</html>

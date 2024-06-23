@@ -1,0 +1,395 @@
+<!-- <!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Catalog</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css">
+</head>
+
+<body> -->
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+    <meta name="ShanghaiMemory" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>微课堂</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nicepage.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav-bar.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/book.css') }}" media="screen">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-video-catalog.css') }}">
+
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"
+            defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js') }}"
+            defer=""></script>
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+    <script type="application/ld+json">{
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "",
+        "logo": "{{ url_for('static', filename='css/ai-logo.png') }}"
+    }</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+
+<body data-path-to-root="./" class="u-body u-xl-mode" data-lang="en"
+      style="background-image:url(https://img.gejiba.com/images/58d1d537216280cd4302d76e302c01f2.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;"
+>
+<header class="page-head u-clearfix u-header u-sticky u-sticky-7a89 u-header myheader" id="sec-ba3e">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a href="https://ShanghaiMemory.Asia" class="head-logo u-image u-logo u-image-1">
+            <img src="{{ url_for('static', filename='css/ai-logo.png') }}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="nav-bar u-menu u-menu-one-level u-offcanvas u-menu-1" data-position="nav-bar">
+            <div class="menu-collapse"
+                 style="font-size: 1rem; letter-spacing: 0px; text-transform: uppercase; font-weight: 500;">
+                <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-decoration u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                   href="#">
+                    <svg class="u-svg-link" viewBox="0 0 24 24">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+                    </svg>
+                    <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <rect y="1" width="16" height="2"></rect>
+                            <rect y="7" width="16" height="2"></rect>
+                            <rect y="13" width="16" height="2"></rect>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="u-custom-menu u-nav-container">
+                <ul class="u-nav u-spacing-2 u-unstyled u-nav-1 nav-slider">
+                    <li class="u-nav-item"><a
+                            class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                            href="/" style="padding: 10px 20px;">首页</a>
+
+                    </li>
+                    <li class="u-nav-item"><a
+                            class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                            href="#" style="padding: 10px 20px;">学习园地</a>
+                        <ul class="bb_ul bb_ul_3 frosted-glass">
+                            <li><a href="/class">微课堂</a></li>
+                            <li><a href="/book">好书推荐</a></li>
+                            <li><a href="/quiz">知识竞赛</a></li>
+                        </ul>
+                    </li>
+                    <li class="u-nav-item"><a
+                            class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                            href="#" style="padding: 10px 20px;">线上参观</a>
+                        <ul class="bb_ul bb_ul_2 frosted-glass">
+                            <li><a href="/3d">3D场馆</a></li>
+                            <li><a href="http://museum.odb.sh.cn/images/odb/360/vtour30/index.html">特别展览</a></li>
+                        </ul>
+                    </li>
+                    <li class="u-nav-item"><a
+                            class="u-active-palette-1-base u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-hover-palette-1-light-1 u-nav-link u-text-active-white u-text-grey-90 u-text-hover-white"
+                            href="/comments" style="padding: 10px 20px;">我有感想</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<div class="tm-page-wrap mx-auto liubai bgmustwhite">
+    <div class="position-relative">
+        <div class="position-absolute tm-site-header">
+            <div class="container-fluid position-relative">
+                <div class="row">
+                    <div class="col-5 col-md-8 ml-auto mr-0">
+                        <div class="tm-site-nav">
+                            <!-- <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
+                                <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed"
+                                    type="button" data-toggle="collapse" data-target="#navbar-nav"
+                                    aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span>
+                                        <i class="fas fa-bars tm-menu-closed-icon"></i>
+                                        <i class="fas fa-times tm-menu-opened-icon"></i>
+                                    </span>
+                                </button>
+                                <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                                    <ul class="navbar-nav text-uppercase">
+                                        <li class="nav-item active">
+                                            <a class="nav-link tm-nav-link" href="#">Videos <span
+                                                    class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link tm-nav-link" href="about.html">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div id="content" class="mx-auto tm-content-container">
+            <main>
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-page-title mb-4">微课堂</h2>
+                        <h2 class="tm-page-title mb-4">上海记忆：他们在这里改变中国</h2>
+                    </div>
+                    <p>上海是中国共产党的诞生地，也是中国共产党人集体向世界亮相的地方。今天的上海，依然扮演着中国沟通世界的前沿角色。中国的诸多改革从此开始，而且仍在继续。
+                    </p>
+                    <p>
+                        为讲述早期中国共产党人在上海的红色峥嵘往事，上海市档案局（馆）联合真实传媒有限公司策划制作8集微纪录片《上海记忆：他们在这里改变中国》（每集8分钟），该片以珍贵文献、历史画面、实地探访等多种形式，全景式地再现了1921年中国共产党诞生至1937年抗战全面爆发16年间，中国共产党在上海波澜壮阔的发展历史。
+                    </p>
+                    <p>
+                        该片作为中共早期党史与上海城市史的跨界作品，起讫点为晚清甲午战争到红军长征胜利和全面抗战爆发，建党、“五卅”运动、“四一二”政变、中共中央从上海迁到苏区、首次关于红军的报道等历史事件，都以珍藏于上海市档案馆和海外的珍贵史料为依托，以城市地理学方法解析历史事件，让历史事件恢复发生在城市空间中的那一刻，是影像史学的一次全新呈现。
+                    </p>
+                    <p>《毛泽东传》作者、原BBC记者、英国历史学家菲利普·肖特担任该片历史叙述人。他以历史学家的严谨与幽默，在历史的发生地以事实说话，带领观众去思考一个世纪之问：“为什么中国人选择了他们自己的道路？”
+                    </p>
+                </div>
+
+                <div class="row tm-catalog-item-list">
+                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                        <div class="position-relative tm-thumbnail-container">
+                            <img src="img/ep1.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                            <a href="episode1.html" class="position-absolute tm-img-overlay">
+                                <i class="fas fa-play tm-overlay-icon"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title">① 千年之变局</h3>
+                            <!-- <p class="tm-catalog-item-text">
+                                中国在19世纪末遭受了甲午战败的国耻，但在上海的《新青年》杂志中，一场思想革命正在悄然兴起。在这个时代，一群坚定的青年开始追寻马克思主义，他们的思考和决定将塑造中国的未来。这是一段革命思想崛起的故事，以《新青年》为中心，改变了中国的历史轨迹。
+                            </p> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                        <div class="position-relative tm-thumbnail-container">
+                            <img src="img/ep2.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                            <a href="episode2.html" class="position-absolute tm-img-overlay">
+                                <i class="fas fa-play tm-overlay-icon"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title">② 说干就干</h3>
+                            <!-- <p class="tm-catalog-item-text">
+                                在1842年，中英签署了《南京条约》，随后，上海崭露头角，成为中国第一块“租界”。这段历史充满了不平等和外国势力的控制。然而，20世纪初，一股强大的变革力量悄然兴起。
+                            </p> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                        <div class="position-relative tm-thumbnail-container">
+                            <img src="img/ep3.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                            <a href="episode3.html" class="position-absolute tm-img-overlay">
+                                <i class="fas fa-play tm-overlay-icon"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title">③ 黄浦江的风暴</h3>
+                            <!-- <p class="tm-catalog-item-text">
+                                位于上海成都北路897号的“中国劳动组合书记部”旧址，见证了中国工人运动的崛起。这个地方也是中国共产党的早期活动中心之一，毛泽东等革命者在此思考并影响了中国的未来。上海作为世界工厂的一部分，承载了工人运动的历史，为中国的进步和变革铺平了道路。
+                            </p> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                        <div class="position-relative tm-thumbnail-container">
+                            <img src="img/ep4.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                            <a href="episode4.html" class="position-absolute tm-img-overlay">
+                                <i class="fas fa-play tm-overlay-icon"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title">④ 激荡的春天</h3>
+                            <p class="tm-catalog-item-text"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                        <div class="position-relative tm-thumbnail-container">
+                            <img src="img/ep5.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                            <a href="episode5.html" class="position-absolute tm-img-overlay">
+                                <i class="fas fa-play tm-overlay-icon"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title">⑤ 4月12日分水岭</h3>
+                            <!-- <p class="tm-catalog-item-text">Duis vulputate nisl metus, eget dapibus nunc ultricies
+                                id. Ut augue mauris, varius quis nulla non, sollicitudin consectetur nisl. Donec
+                                eget arcu placerat, ullamcorper.</p> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                        <div class="position-relative tm-thumbnail-container">
+                            <img src="img/ep6.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                            <a href="episode6.html" class="position-absolute tm-img-overlay">
+                                <i class="fas fa-play tm-overlay-icon"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title">⑥ 返城还是上山</h3>
+                            <!-- <p class="tm-catalog-item-text">Nunc neque risus, ultrices sed luctus at, iaculis at
+                                arcu. Pellentesque rutrum velit nec sapien ullamcorper ultrices. Vestibulum lectus
+                                risus, laoreet pretium ipsum</p> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                        <div class="position-relative tm-thumbnail-container">
+                            <img src="img/ep7.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                            <a href="episode7.html" class="position-absolute tm-img-overlay">
+                                <i class="fas fa-play tm-overlay-icon"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title">⑦ 千里之外的命脉</h3>
+                            <!-- <p class="tm-catalog-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus bibendum orci sit amet dignissim rhoncus. Pellentesque pretium faucibus
+                                vestibulum.</p> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+                        <div class="position-relative tm-thumbnail-container">
+                            <img src="img/ep8.jpg" alt="Image" class="img-fluid tm-catalog-item-img">
+                            <a href="episode8.html" class="position-absolute tm-img-overlay">
+                                <i class="fas fa-play tm-overlay-icon"></i>
+                            </a>
+                        </div>
+                        <div class="p-4 tm-bg-gray tm-catalog-item-description">
+                            <h3 class="tm-text-primary mb-3 tm-catalog-item-title">⑧ 在世界面前亮相</h3>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+
+            <footer class="row pt-5">
+                <div class="col-12">
+                    <!-- <p class="text-right"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2022023082号</a>
+                    </p> -->
+
+                </div>
+            </footer>
+        </div> <!-- tm-content-container -->
+    </div>
+
+</div> <!-- .tm-page-wrap -->
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<footer class="u-align-center-sm u-align-center-xs u-clearfix u-footer u-palette-2-dark-2"
+        style="
+    background: rgb(0,13,36);
+background: linear-gradient(0deg, rgba(0,13,36,1) 21%, rgba(0,13,36,0.8772102591036415) 49%, rgba(0,13,36,0.6727284663865547) 73%, rgba(42,54,64,0.5830926120448179) 88%);
+    " id="sec-f776">
+    <div class="u-clearfix u-sheet u-valign-middle-sm u-sheet-1">
+        <p class="u-text u-text-default u-text-1" data-animation-name="customAnimationIn"
+           data-animation-duration="2500">推荐网站 </p>
+        <div class="u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-1">
+                        <p class="u-text u-text-default u-text-2">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                               data-href="https://www.archives.sh.cn/">上海档案信息网</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-2">
+                        <p class="u-text u-text-default u-text-3">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                               data-href="https://www.shh-shrhmuseum.org.cn/">上海历史博物馆</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-3">
+                        <p class="u-text u-text-default u-text-4">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                               data-href="https://www.xuexi.cn/">学习强国</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-4">
+                        <p class="u-text u-text-default u-text-5">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                               data-href="https://tjj.sh.gov.cn/lsyg/index.html">上海市人民政府</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-5">
+                        <p class="u-text u-text-default u-text-6"><a
+                                class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                                data-href="http://www.txlzp.com/sheng/shanghai">上海老地图</a></p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-6">
+                        <p class="u-text u-text-default u-text-7">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                               data-href="http://ish.xinmin.cn/xnjx/2017/11/01/31330196.html">央视网</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-7">
+                        <p class="u-text u-text-default u-text-8">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                               data-href="https://www.shanghaimuseum.net/">上海博物馆</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-8">
+                        <p class="u-text u-text-default u-text-9">
+                            <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1"
+                               data-href="http://www.aibaohu.com/ShowArticlem.aspx?id=952">中国历史建筑保护网</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icp">© 2023 ShanghaiMemory <a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2022023082号</a>
+    </div>
+</footer>
+<span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px; padding: 15px"
+      class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-1-base" data-href="#">
+          <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use
+                  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+          <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13"
+               xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path
+                  d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+      </span>
+
+</body>
+</html>
+
+</html>

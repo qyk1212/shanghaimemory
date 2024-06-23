@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>知识竞赛</title>
+   <!-- FontAwesome-cdn include -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <!-- Google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com/">
+   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+   <link href="css/css2.css" rel="stylesheet">
+   <!-- Bootstrap-css include -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- Animate-css include -->
+   <link rel="stylesheet" href="css/animate.min.css">
+   <!-- Main-StyleSheet include -->
+   <link rel="stylesheet" href="css/style.css">
+
+
+   <link rel="stylesheet" type="text/css" href="css/default.css" />
+   <link rel="stylesheet" type="text/css" href="css/component.css" />
+</head>
+
+<body>
+   <div class="wrapper position-relative">
+      <div class="container-fluid px-5">
+         <div class="step_bar_content ps-5 pt-5">
+            <h5 class="text-white text-uppercase d-inline-block">知识竞赛</h5>
+         </div>
+         <div class="progress_bar steps_bar mt-3 ps-5 d-inline-block">
+            <div class="step rounded-pill d-inline-block text-center position-relative active current">1</div>
+            <div class="step rounded-pill d-inline-block text-center position-relative">2</div>
+            <div class="step rounded-pill d-inline-block text-center position-relative">3</div>
+            <div class="step rounded-pill d-inline-block text-center position-relative">4</div>
+         </div>
+         <form class="multisteps_form position-relative" id="wizard" method="POST" action="../thankyou/index-1.html">
+            <!------------------------- Step-1 ----------------------------->
+            <div class="multisteps_form_panel active" data-animation="slideVert">
+               <div class="form_content">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="form_title ps-5">
+                           <h1 class="text-white" id="Q1">第一个国际瑜伽日是哪一天?</h1>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-center">
+                        <div class="form_img">
+                           <img id="P1" src="picture/bg_1.png" alt="image_not_found">
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-end">
+                        <div class="form_items radio-list">
+                           <ul class="text-uppercase list-unstyled">
+                              <li>
+                                 <label for="opt_1"
+                                    class="step_1 rounded-pill animate__animated animate__fadeInRight animate_25ms active">
+                                    <span class="label-pointer rounded-pill text-center">A</span>
+                                    <input type="radio" id="opt_1" name="stp_1_select_option" value="A" checked="">
+                                    <span class="label-content d-inline-block text-center rounded-pill" id="Q1C1">21
+                                       June
+                                       2014</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_2"
+                                    class="step_1 rounded-pill  animate__animated animate__fadeInRight animate_50ms">
+                                    <span class="label-pointer rounded-pill text-center">B</span>
+                                    <input type="radio" id="opt_2" name="stp_1_select_option" value="B">
+                                    <span class="label-content d-inline-block text-center rounded-pill" id="Q1C2">21
+                                       June
+                                       2015</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_3"
+                                    class="step_1 rounded-pill animate__animated animate__fadeInRight animate_100ms">
+                                    <span class="label-pointer rounded-pill text-center">C</span>
+                                    <input type="radio" id="opt_3" name="stp_1_select_option" value="C">
+                                    <span class="label-content d-inline-block text-center rounded-pill" id="Q1C3">8 June
+                                       2016</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_4" class="step_1 animate__animated animate__fadeInRight animate_150ms">
+                                    <span class="label-pointer rounded-pill text-center">D</span>
+                                    <input type="radio" id="opt_4" name="stp_1_select_option" value="D">
+                                    <span class="label-content d-inline-block text-center rounded-pill" id="Q1C4">21
+                                       Sept
+                                       2015</span>
+                                 </label>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!---------- Form Button ---------->
+               <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                  <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"
+                     onclick="showScore('1')"> 下一题 <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+               </div>
+            </div>
+            <!------------------------- Step-2 ----------------------------->
+            <div class="multisteps_form_panel" data-animation="slideVert">
+               <div class="form_content">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="form_title ps-5">
+                           <h1 class="text-white" id="Q2">那个选项最能描述你的工作?</h1>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-center">
+                        <div class="form_img">
+                           <img id="P2" src="picture/bg_2.png" alt="image_not_found">
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-end">
+                        <div class="form_items radio-list">
+                           <ul class="text-uppercase list-unstyled">
+                              <li>
+                                 <label for="opt_5"
+                                    class="step_2 rounded-pill animate__animated animate__fadeInRight animate_25ms">
+                                    <span class="label-pointer rounded-circle text-center">A</span><input type="radio"
+                                       id="opt_5" class="required" name="stp_2_select_option" value="A" required="">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q2C1">business</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_6"
+                                    class="step_2 rounded-pill animate__animated animate__fadeInRight animate_50ms">
+                                    <span class="label-pointer rounded-circle text-center">B</span><input type="radio"
+                                       id="opt_6" name="stp_2_select_option" value="B">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q2C2">Employee</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_7"
+                                    class="step_2 rounded-pill animate__animated animate__fadeInRight animate_100ms">
+                                    <span class="label-pointer rounded-circle text-center">C</span><input type="radio"
+                                       id="opt_7" name="stp_2_select_option" value="C">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q2C3">Journalist</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_8"
+                                    class="step_2 rounded-pill animate__animated animate__fadeInRight animate_150ms">
+                                    <span class="label-pointer rounded-circle text-center">D</span><input type="radio"
+                                       id="opt_8" name="stp_2_select_option" value="D">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q2C4">Other</span>
+                                 </label>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!---------- Form Button ---------->
+               <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                  <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase"
+                     id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span> 上一题</button>
+                  <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"
+                     onclick="showScore('2')"> 下一题 <span><i class="fas fa-arrow-right ps-1"></i></span></button>
+               </div>
+            </div>
+            <!------------------------- Step-3 ----------------------------->
+            <div class="multisteps_form_panel" data-animation="slideVert">
+               <div class="form_content">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="form_title ps-5">
+                           <h1 class="text-white" id="Q3">你主要在那个平台从事业务?</h1>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-center">
+                        <div class="form_img">
+                           <img id="P3" src="picture/bg_3.png" alt="image_not_found">
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-end">
+                        <div class="form_items radio-list">
+                           <ul class="text-uppercase list-unstyled">
+                              <li>
+                                 <label for="opt_9"
+                                    class="step_3 rounded-pill animate__animated animate__fadeInRight animate_25ms">
+                                    <span class="label-pointer rounded-circle text-center">A</span><input type="radio"
+                                       id="opt_9" class="required" name="stp_3_select_option" value="A">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q3C1">Facebook</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_10"
+                                    class="step_3 rounded-pill animate__animated animate__fadeInRight animate_50ms">
+                                    <span class="label-pointer rounded-circle text-center">B</span><input type="radio"
+                                       id="opt_10" name="stp_3_select_option" value="B">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q3C2">Twitter</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_11"
+                                    class="step_3 rounded-pill animate__animated animate__fadeInRight animate_100ms">
+                                    <span class="label-pointer rounded-circle text-center">C</span><input type="radio"
+                                       id="opt_11" name="stp_3_select_option" value="C">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q3C3">Instagram</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_12"
+                                    class="step_3 rounded-pill animate__animated animate__fadeInRight animate_150ms">
+                                    <span class="label-pointer rounded-circle text-center">D</span><input type="radio"
+                                       id="opt_12" name="stp_3_select_option" value="D">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q3C4">Pinterest</span>
+                                 </label>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!---------- Form Button ---------->
+               <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                  <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase"
+                     id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span> 上一题</button>
+                  <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"
+                     onclick="showScore('3')">下一题<span><i class="fas fa-arrow-right ps-1"></i></span></button>
+               </div>
+            </div>
+            <!------------------------- Step-4 ----------------------------->
+            <div class="multisteps_form_panel" data-animation="slideVert">
+               <div class="form_content">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="form_title ps-5">
+                           <h1 class="text-white" id="Q4">Virtual Team Building Game For Remote Teams?</h1>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-center">
+                        <div class="form_img">
+                           <img id="P4" src="picture/bg_4.png" alt="image_not_found">
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-end">
+                        <div class="form_items radio-list">
+                           <ul class="text-uppercase list-unstyled">
+                              <li>
+                                 <label for="opt_13"
+                                    class="step_4 rounded-pill animate__animated animate__fadeInRight animate_25ms">
+                                    <span class="label-pointer rounded-circle text-center">A</span><input type="radio"
+                                       id="opt_13" name="stp_4_select_option" value="A">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q4C1">Zoom</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_14"
+                                    class="step_4 rounded-pill animate__animated animate__fadeInRight animate_50ms">
+                                    <span class="label-pointer rounded-circle text-center">B</span><input type="radio"
+                                       id="opt_14" name="stp_4_select_option" value="B">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q4C2">Skype</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_15"
+                                    class="step_4 rounded-pill animate__animated animate__fadeInRight animate_100ms">
+                                    <span class="label-pointer rounded-circle text-center">C</span><input type="radio"
+                                       id="opt_15" name="stp_4_select_option" value="C">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q4C3">Google</span>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label for="opt_16"
+                                    class="step_4 rounded-pill animate__animated animate__fadeInRight animate_150ms">
+                                    <span class="label-pointer rounded-circle text-center">D</span><input type="radio"
+                                       id="opt_16" name="stp_4_select_option" value="D">
+                                    <span class="label-content d-inline-block text-center rounded-pill"
+                                       id="Q4C4">Facebook</span>
+                                 </label>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!---------- Form Button ---------->
+               <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                  <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase"
+                     id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span> 上一题</button>
+                  <button type="button" class="f_btn rounded-pill active text-uppercase" id="nextBtn"
+                     onclick="showScore('4')"> 提交</button>
+               </div>
+            </div>
+         </form>
+      </div>
+
+   </div>
+
+   <div class="md-modal md-effect-1" id="modal-1">
+      <div class="md-content">
+         <h3 id="answer-status">Modal Dialog</h3>
+         <div>
+            <p id="answer-tips">This is a modal window. You can do the following things with it:</p>
+            <button class="md-close" onclick="closeModal()">关闭</button>
+         </div>
+      </div>
+   </div>
+
+   <!-- jQuery-js include -->
+   <script src="js/jquery-3.6.0.min.js"></script>
+   <!-- Bootstrap-js include -->
+   <script src="js/bootstrap.min.js"></script>
+   <!-- jQuery-validate-js include -->
+   <script src="js/jquery.validate.min.js"></script>
+   <!-- Custom-js include -->
+   <script src="js/script.js"></script>
+
+   <script>
+      function randomSort(a, b) { return Math.random() > 0.5 ? -1 : 1; }
+      var questionNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+      questionNum.sort(randomSort);
+      var Q = [["中国签订了什么条约，使得上海成为条约中被迫开放的五个通商口岸之一？",
+         "《南京条约》", "《天津条约》", "《北京条约》", "《瑷珲条约》", "A",
+         "1842年，中国在鸦片战争中失败，清政府与英签订战后条约《南京条约》，条约规定开放广州、厦门、福州、宁波、上海五处作为通商口岸。"]
+         , ["上海“零公里”标志在哪里？",
+         "和平饭店", "人民广场", "南京路步行街", "福州路", "B",
+         "在人民广场有一个上海“零公里”标志，从1958年至今，一块大理石的石碑标志就一直设置在人民大道道路中央。"]
+         , ["最开始，上海县是什么时候成立的？",
+         "1180年", "1291年", "1302年", "1413年", "B",
+         "1291年8月19日，朝廷准松江知府仆散翰文奏设立上海县，县治定在宋朝设立的上海镇，县衙设在上海镇来榷场，后来称为十六铺。"]
+         , ["上海曾被多个国家占领国，以下哪个国家没有占领过上海？",
+         "英国", "法国", "日本", "俄罗斯", "D",
+         "1842年鸦片战争后期英军攻陷上海吴淞、宝山；1849年上海法国租界开辟；1937年日军发动八一三事变。"]
+         , ["上海的老城厢是指哪个历史区域？",
+         "豫园", "陆家嘴", "浦东新区", "南京东路", "A",
+         "豫园城隍庙，也就是“老城厢”，曾经属于南市区，解放以前，老南市区属于华界。"]
+         , ["上海以前的市花是？",
+         "白玉兰", "广玉兰", "棉花", "迎春花", "C",
+         "据《上海园林志》记载，民国时期社会局以莲花、月季等花卉作为市花的候选对象，后又增加棉花、牡丹和桂花。最后，共回收1.7万余票，其中棉花名列第一。当选为上海市花。"]
+         , ["上海有一条热线，13国语言实时翻译，它是？",
+         "962288", "12345", "6388999", "954321", "A",
+         "成立于2006年的“对外热线”962288，是中国大陆最早探索向外籍人士提供24小时多语种公益服务的热线之一。运营十几年来，该热线已经逐步成为外籍人士在上海工作、生活、学习的好助手。"]
+         , ["上海人最开始说的洋泾浜是指什么？",
+         "不标准的上海话", "上海的一条河", "旧时租借地名", "最纯正的上海话", "B",
+         "洋泾浜，原是上海的一条河浜，位于从前的公共租界和法租界之间，后来被填成一条马路，即今天的延安东路。"]
+         , ["上海的著名地标建筑“东方明珠塔”位于哪个区？",
+         "浦东新区", "黄浦区", "徐汇区", "静安区", "A",
+         "东方明珠广播电视塔，简称“东方明珠”，位于上海市浦东新区陆家嘴世纪大道1号，是集都市观光、时尚餐饮、广播电视发射等多功能于一体的上海市标志性建筑之一。"]
+         , ["上海国际金融中心（上海金茂大厦）的俗称是什么？",
+         "魔都之巅", "东方明珠", "陆家嘴之冠", "上海之巅", "C",
+         "上海国际金融中心以其独特的外观和高度而闻名，通常被称为”陆家嘴之冠”。"]
+         , ["上海世博会曾于哪一年举办？",
+         "2008年", "2010年", "2012年", "2014年", "B",
+         "上海世博会于2010年在浦东新区举办，是我国第一次举办的综合类世界博览会,该博览会吸引了全球参展国家和游客。"]
+         , ["上海张江以前是一个盛产什么的小镇？",
+         "豆腐", "酱油", "酱菜", "油菜花", "B",
+         "张江最初是个人名，明朝隆庆年间，这个名为张江的商人在现在的广兰路附近给自己的店铺建了栅栏，于是人民称这里为张江栅，后来简称”张江“。在张江高科建立之前，张江一直是个盛产酱油的小镇。"]
+         , ["上海地铁的Logo上有几个浪形图案？",
+         "1个", "2个", "3个", "4个", "C",
+         "上海地铁的Logo上有3个蓝色的浪形图案，象征着水的流动。"]
+         , ["上海的地标性步行街“南京路”长多少公里？",
+         "1公里", "3公里", "5公里", "8公里", "B",
+         "南京路步行街位于黄浦区，西起西藏中路，东至中山东一路外滩，总长约3公里，是上海最繁华的购物区之一。"]
+         , ["上海的标志性塔楼“上海中心大厦”有多少层？",
+         "88层", "101层", "128层", "138层", "D",
+         "上海中心大厦拥有138层，高632米，是上海市内最高的建筑物。"]
+         , ["国内第一条经由隧道过江的无轨电车线路，是上海的哪一条线路？",
+         "隧道六线", "隧道五线", "隧道三线", "隧道一线", "B",
+         "上海的隧道五线是国内第一条经由隧道过江的无轨电车线路，1990年作为延安东路隧道开通和浦东大开发的公交配套开通。2005年因客流太低，线路重复全线撤销，相当可惜。"]
+         , ["中国最长国道的起点在上海的哪里？",
+         "徐家汇", "静安寺", "延安中路", "人民广场", "D",
+         "中国有一条震撼世界的国道，即318国道。它的起点就位于上海的人民广场。它几乎是沿着北纬30°前行的，穿过中国腹地，进入四川，再入西藏，重点是日喀则的聂拉木县。全程5476公里，是中国最长的国道。"]
+         , ["以下关于上海的说法，哪一种有误？",
+         "上海的简称“沪”，是一种捕鱼工具。", "贯穿上海的黄浦江曾被叫作“春申江”。", "城隍庙的九曲桥有十八弯。", "五角场还有个名字为“江湾·五角场”。", "C",
+         "九曲桥以湖心亭中心分为两段，一段七曲一段八曲，一共十五弯。之所以叫九曲桥，是因为按照我国人民的传统习惯，九是阳数最高的数，具有吉利之意，故曲桥往往取名“九曲”。"]
+         , ["以下哪里为上海城市坐标的原点？",
+         "国际饭店", "南京路步行街", "人民广场", "步行街", "A",
+         "上海城市坐标原点：国际饭店楼顶的中心旗杆为原点。国际饭店的大堂里设有中心旗杆垂直线下来的“副点”，可供游客免费参观。"]
+         , ["上海自然海拔最高的地方在哪里？",
+         "佘山", "崇明", "大金山", "奉贤", "C",
+         "若以上海全境为范围，自然海拔最高点为大金山，海拔103.4米。然而该岛尚未开发，人迹罕至。一般说上海最高的山都说陆上的。"]];
+      document.getElementById("Q1").innerHTML = Q[questionNum[0]][0];
+      document.getElementById("Q1C1").innerHTML = Q[questionNum[0]][1];
+      document.getElementById("Q1C2").innerHTML = Q[questionNum[0]][2];
+      document.getElementById("Q1C3").innerHTML = Q[questionNum[0]][3];
+      document.getElementById("Q1C4").innerHTML = Q[questionNum[0]][4];
+      document.getElementById("P1").src = "picture/image" + (questionNum[0] + 1) + ".png";
+
+      document.getElementById("Q2").innerHTML = Q[questionNum[1]][0];
+      document.getElementById("Q2C1").innerHTML = Q[questionNum[1]][1];
+      document.getElementById("Q2C2").innerHTML = Q[questionNum[1]][2];
+      document.getElementById("Q2C3").innerHTML = Q[questionNum[1]][3];
+      document.getElementById("Q2C4").innerHTML = Q[questionNum[1]][4];
+      document.getElementById("P2").src = "picture/image" + (questionNum[1] + 1) + ".png";
+
+      document.getElementById("Q3").innerHTML = Q[questionNum[2]][0];
+      document.getElementById("Q3C1").innerHTML = Q[questionNum[2]][1];
+      document.getElementById("Q3C2").innerHTML = Q[questionNum[2]][2];
+      document.getElementById("Q3C3").innerHTML = Q[questionNum[2]][3];
+      document.getElementById("Q3C4").innerHTML = Q[questionNum[2]][4];
+      document.getElementById("P3").src = "picture/image" + (questionNum[2] + 1) + ".png";
+
+      document.getElementById("Q4").innerHTML = Q[questionNum[3]][0];
+      document.getElementById("Q4C1").innerHTML = Q[questionNum[3]][1];
+      document.getElementById("Q4C2").innerHTML = Q[questionNum[3]][2];
+      document.getElementById("Q4C3").innerHTML = Q[questionNum[3]][3];
+      document.getElementById("Q4C4").innerHTML = Q[questionNum[3]][4];
+      document.getElementById("P4").src = "picture/image" + (questionNum[3] + 1) + ".png";
+      var elementNumber;
+      var correct = [0, 0, 0, 0, 0];
+      function showScore(elementNum) {
+         var radio = document.getElementsByName('stp_' + elementNum + '_select_option');
+         var answer;
+         for (i = 0; i < radio.length; i++) {
+            if (radio[i].checked) {
+               answer = radio[i].value;
+               break;
+            }
+         }
+         var modal = document.getElementById("modal-1");
+         document.getElementById("answer-tips").innerHTML = Q[questionNum[elementNum - 1]][6];
+         // var modal = document.getElementById("modal-1");
+         // document.getElementById("answer-tips").innerHTML = Q[questionNum[nowAt]][6];
+         modal.classList.add("md-show");
+         if (answer == Q[questionNum[elementNum - 1]][5]) {
+            document.getElementById("answer-status").innerHTML = "答对啦";
+            document.querySelector('.md-content').style.background = "#92e3a9";
+            correct[Number(elementNum)] = 1;
+         }
+         else {
+            document.getElementById("answer-status").innerHTML = "答错啦";
+            document.querySelector('.md-content').style.background = "red";
+         }
+         nowAt = Number(elementNum) + 1;
+      }
+      function closeModal() {
+         // 获取弹窗元素
+         var modal = document.getElementById('modal-1');
+         // 关闭弹窗
+         modal.classList.remove("md-show");
+         if (nowAt == 5) {
+            showResult();
+         }
+         // modal.style.display = 'none';
+      }
+      function showResult() {
+         var score = correct[1] + correct[2] + correct[3] + correct[4];
+         var standing = [0, 23, 42, 65, 99];
+         var modal = document.getElementById("modal-1");
+         // document.getElementById("answer-tips").innerHTML = Q[questionNum[elementNum - 1]][6];
+         // var modal = document.getElementById("modal-1");
+         // document.getElementById("answer-tips").innerHTML = Q[questionNum[nowAt]][6];
+         modal.classList.add("md-show");
+         document.getElementById("answer-status").innerHTML = "恭喜您答对了 " + score + " 题";
+         document.getElementById("answer-tips").innerHTML = "超越了 " + standing[score] + " %的人！";
+         document.querySelector('.md-content').style.background = "red";
+         nowAt = -1;
+      }
+   </script>
+</body>
+
+</html>

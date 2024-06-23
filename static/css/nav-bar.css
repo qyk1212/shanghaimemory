@@ -1,0 +1,58 @@
+ul{
+    list-style: none;/*去掉列表的圆点*/
+}
+.bb_ul a{
+    display: block;          /*将链接的点击区域扩大到整个块*/
+    text-decoration: none;   /*取消连接的下划线*/
+    text-align: center;
+    color:#000;            /*链接字体为黑色*/
+}
+
+/* 一级菜单点击特效 */
+.nav-slider li:hover .bb_ul{
+    display: block;
+    /* 展示块 */
+}
+/* 设置二级菜单，实现与“一级菜单点击特效”配合，实现导航栏下拉*/
+.bb_ul{
+    padding-left: 0;
+    position:fixed;
+    /* 相对位置 */
+    width: 100px;
+    top:44px;
+    /* 顶格，与顶部0距离 */
+    /* background-color: #f1f1f1; */
+    display: none;
+    /* 隐藏块 */
+}
+
+/* 二级菜单鼠标挪动特效 */
+.bb_ul>li>a:hover{
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, .3);
+
+
+    position: relative;
+    background-color: #0084ff87;
+    color: white;
+    display: block;
+}
+
+/* 设置二级菜单高度 */
+.bb_ul_3{
+    height: 120px;
+}
+
+/* 设置二级菜单高度 */
+.bb_ul_2{
+    height: 80px;
+}
+/* 设置二级菜单选项高度 */
+.bb_ul>li{
+    line-height: 40px;
+}
+
+.myheader{
+    background-color: rgb(255, 255, 255) !important;
+    z-index: 9999999;
+}

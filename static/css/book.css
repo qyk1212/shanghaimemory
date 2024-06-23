@@ -1,0 +1,113 @@
+.banner {
+	position: relative;
+	top:60px;
+	left: 60px;
+	height: 460px;
+	width: 1400px;
+	overflow: hidden;
+	justify-content:center;
+	text-align: center;
+
+}
+
+.titi {
+	top:70px;
+	width: 1200px;
+	position: relative;
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 20px;
+	text-align: center;
+	border-bottom: #333 1px solid;
+	font-size: 20px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.sheshi {
+	width: 1200px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.sheshi ul {
+	padding: 30px;
+}
+
+.sheshi ul li {
+	width: 280px;
+	height: 430px;
+	float: left;
+	padding: 40px;
+	text-align: center;
+}
+
+.sheshi ul li img {
+	width: 200px;
+	height: 315px;
+}
+
+.sheshi ul li h1 {
+	color: #141313;
+	height: 40px;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 40px;
+}
+
+.tushu{
+	width:1200px;
+	margin:0 auto;
+	height:auto;
+	overflow:hidden;
+	margin-bottom:30px;
+	}
+
+.ydtit{
+	height: 50px;
+	line-height: 50px;
+	background: #efefef;
+	padding-left: 10px;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.ydbox1{
+	height: 320px;
+	margin-bottom:20px
+}
+.ydbox1-left{
+	width: 260px;
+	float: left;
+	margin-left: 15px;
+	margin-right:30px;
+	height:100%;
+	overflow: hidden;
+}
+.ydbox1-left img{
+	border: #efefef 1px solid;
+	
+}
+.ydbox1-right{
+	width: 890px;
+	float: left;
+	padding-top: 10px;
+}
+.ydbox1-right h1{
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.ydbox2 {
+    height: auto;
+    overflow: hidden;
+    padding: 15px 20px;
+}	
+.ydbox2 p{
+	text-indent:2em;
+	line-height:25px;
+	font-size:14px;	
+}
